@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "install-build": "yarn install && yarn build"
   },
   "dependencies": {
     "vitepress-theme-teek": "^1.4.3"
