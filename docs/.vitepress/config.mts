@@ -118,6 +118,7 @@ export default defineConfig({
     title: "Mujin Blog",
     description: "Mujin Blog",
     cleanUrls: true,
+    ignoreDeadLinks: true,
     markdown: {
         // 开启行号
         lineNumbers: true,
