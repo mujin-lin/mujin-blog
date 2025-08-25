@@ -38,6 +38,7 @@ const teekConfig = defineTeekConfig({
         circleBgMask: false, // 头像圆形背景图是否显示遮罩层
         color: "#fff",
     },
+    ignoreDeadLinks:true,
     head: [],
     teekHome: true,
     vpHome: true,
