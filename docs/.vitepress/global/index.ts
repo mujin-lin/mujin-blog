@@ -1,3 +1,6 @@
 export * from "./image/imageLink"
 export * from "./banner/bannerConfig"
 export * from "./head/headMenu"
+export * from "./footer/footerConfig"
+export * from "./social/socialConfig"
+export * from "./reward/rewardConfig"

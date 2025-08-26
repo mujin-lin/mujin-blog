@@ -9,7 +9,7 @@ const bannerDescription = [
     "业精于勤荒于嬉,行成于思而毁于随。— 唐·韩愈",
 ]
 
-const imgIntervalMills = 3000000;
+const imgIntervalMills = 50000;
 
 // 博客默认配置
 export const partImgBanner: Banner = {

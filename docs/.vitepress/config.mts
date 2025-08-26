@@ -1,8 +1,7 @@
 import {defineConfig} from "vitepress";
-import {llmstxt} from "vitepress-plugin-llms";
 import {defineTeekConfig} from "vitepress-theme-teek/config";
 import {version} from "vitepress-theme-teek/es/version";
-import {headMenu} from "./global";
+import {headMenu, rewardConfig, vpSocial} from "./global";
 
 const coverImages = [
     "/img/bg/1.webp",
@@ -47,18 +46,8 @@ const teekConfig = defineTeekConfig({
     homeCardListPosition: "left",
     social: [],
     features: [],
-    footerInfo: {
-        theme: {
-            show: true,
-            name: `Theme By Teek@${version}`,
-        },
-        icpRecord: {
-            name: "蜀ICP备2023038111号",
-            link: "https://beian.miit.gov.cn",
-            icon: "/img/filing/icp.png",
-            iconType: "img"
-        }
-    },
+    // footerInfo: {
+    // },
     copyright: {
         createYear: 2025,
         suffix: "Mujin",
@@ -83,6 +72,14 @@ const teekConfig = defineTeekConfig({
             },
         },
     ],
+    articleShare: {
+        enabled: true, // 是否开启文章链接分享功能
+        text: "分享此页面", // 分享按钮文本
+        copiedText: "链接已复制", // 复制成功文本
+        query: false, // 是否包含查询参数
+        hash: false, // 是否包含哈希值
+    },
+    appreciation:rewardConfig,
     vitePlugins: {
         sidebarOption: {
             // initItems: false, //这条命令注释后，才会让文档和目录的样式保持一致
@@ -176,10 +173,7 @@ export default defineConfig({
         //     }
         // ],
 
-        socialLinks: [
-            {icon: 'github', link: 'https://github.com/mujin-lin'},
-            {icon: 'gitee', link: 'https://gitee.com/mujin-lin'}
-        ],
+        socialLinks:vpSocial,
         search: {
             provider: "local",
         }

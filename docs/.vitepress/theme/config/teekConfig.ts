@@ -1,5 +1,7 @@
 import type {TeekConfig} from "vitepress-theme-teek";
-import {blogAllPicture, blogSmallPicture, fullImgBanner, partImgBanner,imageLink} from "../../global";
+import {blogAllPicture, blogSmallPicture, fullImgBanner, partImgBanner, imageLink, teekSocial} from "../../global";
+import {footerInfo} from "../../global";
+import {Banner} from "vitepress-theme-teek/es/config/interface";
 
 // 文档配置
 export const teekDocConfig: TeekConfig = {
@@ -16,9 +18,6 @@ const teekBlogCommonConfig: TeekConfig = {
     vpHome: false,
     wallpaper: {
         enabled: true,
-    },
-    footerInfo: {
-        customHtml: `<span id="runtime"></span>`, // 需要搭配 .vitepress/theme/helper/useRuntime.ts 使用
     },
     docAnalysis: {
         createTime: "2025-08-22",
@@ -79,18 +78,8 @@ const teekBlogCommonConfig: TeekConfig = {
         // ],
         autoScroll: true,
     },
-    social: [
-        {
-            icon: "mdi:github",
-            name: "GitHub",
-            link: "https://github.com/mujin-lin",
-        },
-        {
-            icon: "simple-icons:gitee",
-            name: "Gitee",
-            link: "https://gitee.com/mujin-lin",
-        },
-    ],
+    social: teekSocial,
+    footerInfo:footerInfo
 };
 
 // 博客默认配置
@@ -226,18 +215,23 @@ export const teekBlogCardConfig: TeekConfig = {
     },
     homeCardListPosition: "left",
     banner: fullImgBanner,
-    //     {
-    //     name: "🎉 Mujin Blog",
-    //     bgStyle: "fullImg",
-    //     imgSrc: [`https://bing.img.run/rand.php?t=${Date.now()+Math.round(10)}`,
-    //         `https://api.dujin.org/bing/1920.php`,
-    //         `https://bing.img.run/rand.php?t=${Date.now()+Math.round(10)}`,
-    //     ],
-    //     description: [
-    //         "忙碌的生活里，也要记得给自己一点甜，就像小时候那颗最爱的糖果",
-    //         "不积跬步无以至千里,不积小流无以成江海。 —— 《劝学》",
-    //         "业精于勤荒于嬉,行成于思而毁于随。—— 唐·韩愈",
-    //     ],
-    //     descStyle: "types",
+        // function():Banner{
+        // console.log(111,fullImgBanner)
+        // return fullImgBanner}.call(this),
+        // {
+        // name: "🎉 Mujin Blog",
+        // bgStyle: "fullImg",
+        // imgSrc: [`https://res.abeim.cn/api-bing_img?idx=sj&export=img&t=${Date.now()+Math.round(10)}`,
+        //     `https://api.dujin.org/bing/1920.php`,
+        //     `https://api.btstu.cn/sjbz/api.php?lx=fengjing&t=${Date.now()+Math.round(10)}`,
+        //     `https://www.dmoe.cc/random.php?t=${Date.now()+Math.round(10)}`,
+        // ],
+        // description: [
+        //     "忙碌的生活里，也要记得给自己一点甜，就像小时候那颗最爱的糖果",
+        //     "不积跬步无以至千里,不积小流无以成江海。 —— 《劝学》",
+        //     "业精于勤荒于嬉,行成于思而毁于随。—— 唐·韩愈",
+        // ],
+        // descStyle: "types",
+        //     imgInterval:5000,
     // },
 };

@@ -2,6 +2,13 @@
 layout: home
 
 tk:
+  social:
+    - icon: mdi:github
+      name: GitHub
+      link: https://github.com/mujin-lin
+    - icon: simple-icons:gitee
+      name: Gitee
+      link: https://gitee.com/mujin-lin
   teekHome: false
   features: # 可选的
 #    - title: 初见
