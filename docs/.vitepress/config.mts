@@ -80,6 +80,17 @@ const teekConfig = defineTeekConfig({
         hash: false, // 是否包含哈希值
     },
     appreciation:rewardConfig,
+    articleBottomTip: () => {
+        return {
+            type: "tip",
+            title: "声明",
+            text: `<p>作者：Mujin</p>
+             <p>版权：此文章版权归 Mujin 所有，如有转载，请注明出处!</p>
+             <p style="margin-bottom: 0">链接：可点击右上角分享此页面复制文章链接</p>
+            `,
+        };
+    },
+
     vitePlugins: {
         sidebarOption: {
             // initItems: false, //这条命令注释后，才会让文档和目录的样式保持一致
