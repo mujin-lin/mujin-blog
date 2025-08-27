@@ -4,6 +4,7 @@ import {version} from "vitepress-theme-teek/es/version";
 import {headMenu, rewardConfig, vpSocial} from "./global";
 import mathJax3 from 'markdown-it-mathjax3';
 import mermaid from 'markdown-it-mermaid';
+import { vitepressPluginLegend } from 'vitepress-plugin-legend'
 
 const coverImages = [
     "/img/bg/1.webp",
@@ -95,7 +96,10 @@ const teekConfig = defineTeekConfig({
     markdown:{
         config:(md)=>{
             md.use(mathJax3);
-            md.use(mermaid);
+            vitepressPluginLegend(md, {
+                markmap: { showToolbar: true }, // 显示脑图工具栏
+                mermaid: true // 启用 Mermaid
+            })
         },
     },
     // vite:{
