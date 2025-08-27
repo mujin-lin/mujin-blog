@@ -2,6 +2,8 @@ import {defineConfig} from "vitepress";
 import {defineTeekConfig} from "vitepress-theme-teek/config";
 import {version} from "vitepress-theme-teek/es/version";
 import {headMenu, rewardConfig, vpSocial} from "./global";
+import mathJax3 from 'markdown-it-mathjax3';
+import mermaid from 'markdown-it-mermaid';
 
 const coverImages = [
     "/img/bg/1.webp",
@@ -90,7 +92,15 @@ const teekConfig = defineTeekConfig({
             `,
         };
     },
-
+    markdown:{
+        config:(md)=>{
+            md.use(mathJax3);
+            md.use(mermaid);
+        },
+    },
+    // vite:{
+    //     plugins:[legend()]
+    // },
     vitePlugins: {
         sidebarOption: {
             // initItems: false, //这条命令注释后，才会让文档和目录的样式保持一致
