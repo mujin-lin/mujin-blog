@@ -9,7 +9,6 @@ export const footerInfo:FooterInfo = {
     icpRecord: {
         name: "蜀ICP备2023038111号",
         link: "https://beian.miit.gov.cn",
-        icon: "/img/filing/icp.png",
         iconType: "img"
     }
 }
