@@ -30,7 +30,7 @@ tk:
 hero:
   name: Mujin
   text: Mujin 的个人博客
-  tagline: ✨Mujin 的个人博客站，欢迎光临，希望能找到您需要的东西!
+  tagline: ✨欢迎光临，Mujin 的个人博客站，大家互相学习，共同进步
   actions:
     - theme: brand
       text: 软考

@@ -10,6 +10,7 @@ export const teekDocConfig: TeekConfig = {
             defaultMode: "bothWidthAdjustable",
         },
     },
+    footerInfo:footerInfo,
 };
 
 // 博客基础配置
