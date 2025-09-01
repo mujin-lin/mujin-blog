@@ -1,7 +1,7 @@
 import {Banner} from "vitepress-theme-teek/es/config/interface";
 import {imageLink} from "../image/imageLink";
 
-const bannerName = "🎉 Mujin Blog";
+const bannerName = "Mujin Blog";
 
 const bannerDescription = [
     "忙碌的生活里，也要记得给自己一点甜，就像小时候那颗最爱的糖果",

@@ -1,4 +1,4 @@
-import {studyItem} from "./studyItem";
+import {about, ruankaoItems} from "./navItems";
 
 export const headMenu = [
     {text: "🏠首页", link: "/"},
@@ -8,9 +8,9 @@ export const headMenu = [
                   <span>软考</span>
                 </div>
                 `,
-        items: studyItem
+        items: ruankaoItems
     },
-    {text: "关于", link: "/about/navigation"},
+    {text: "关于", items: about},
 ]
 // {
 //     text: "指南",

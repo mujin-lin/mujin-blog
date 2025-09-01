@@ -29,15 +29,15 @@ tk:
 
 hero:
   name: Mujin
-  text: Mujin Blog
+  text: Mujin 的个人博客
   tagline: ✨Mujin 的个人博客站，欢迎光临，希望能找到您需要的东西!
   actions:
-#    - theme: brand
-#      text: 开始
-#      link: /guide/quickstart
-#    - theme: alt
-#      text: 配置
-#      link: /reference/config
+    - theme: brand
+      text: 软考
+      link: /ruankao/intro
+    - theme: alt
+      text: 关于本站
+      link: /about/web
   image:
     src: /mujin-logo.png
     alt: Mujin

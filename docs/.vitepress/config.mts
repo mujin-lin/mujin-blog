@@ -102,6 +102,9 @@ const teekConfig = defineTeekConfig({
     },
     // 在每个文章页顶部显示 VitePress 容器添加提示，使用场景如超过半年的文章自动提示文章内容可能已过时
     articleTopTip: (frontmatter, localeIndex, page) => {
+        if (frontmatter.sidebar === false){
+            return
+        }
         const tip: Record<string, string> = {
             type: "warning",
             text: "文章发布较早，内容可能过时，阅读注意甄别。",
@@ -125,6 +128,8 @@ const teekConfig = defineTeekConfig({
             })
         },
     },
+    // 是否全局启用视图渐入过渡效果
+    windowTransition:true,
     // 是否启用侧边栏展开/折叠触发器，点击触发器可以展开/折叠侧边栏。
     sidebarTrigger: true,
     friendLink:friends,
@@ -142,7 +147,7 @@ const teekConfig = defineTeekConfig({
         showInfo: true, // 是否展示作者、日期、分类、标签、字数、阅读时长、浏览量等文章信息，分别作用于首页和文章页
         showAuthor: true, // 是否展示作者
         showCreateDate: true, // 是否展示创建日期
-        showUpdateDate: false, // 是否展示更新日期，仅在文章页显示
+        showUpdateDate: true, // 是否展示更新日期，仅在文章页显示
         showCategory: false, // 是否展示分类
         showTag: false, // 是否展示标签
         // 将文章信息传送到指定位置，仅限在文章页生效，默认在文章页顶部
