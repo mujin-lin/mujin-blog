@@ -1,5 +1,6 @@
 import Teek from "vitepress-theme-teek";
 import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
+import MyChart from './components/MyChart.vue'
 import {useData} from "vitepress";
 import {defineComponent, h} from "vue";
 import { initComponent } from 'vitepress-plugin-legend/component'
@@ -39,6 +40,8 @@ export default {
     }),
     enhanceApp({app, router, siteData}) {
         // ...
-        initComponent(app)
+        initComponent(app);
+        // echarts 图表
+        app.component('MyChart',MyChart)
     }
 };

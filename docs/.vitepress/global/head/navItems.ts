@@ -17,3 +17,10 @@ export const about = [
         link: '/about/navigation'
     }
 ];
+
+export const notes = [
+    {
+        text: "💰金价",
+        link: '/note/gold'
+    }
+]

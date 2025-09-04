@@ -4,6 +4,7 @@ import {version} from "vitepress-theme-teek/es/version";
 import {friends, headMenu, rewardConfig, vpSocial} from "./global";
 import mathJax3 from 'markdown-it-mathjax3';
 import { vitepressPluginLegend } from 'vitepress-plugin-legend'
+import path from 'path'
 
 const coverImages = [
     "/img/bg/1.webp",
@@ -140,6 +141,11 @@ const teekConfig = defineTeekConfig({
         separator: "/", // 面包屑分隔符
         homeLabel: "首页", // 鼠标悬停首页图标的提示文案
     },
+    // 文章默认的作者信息
+    author: {
+        name: "Mujin", // 作者名称
+        link: "https://github.com/mujin-lin", // 点击作者名称后跳转的链接
+    },
     // 文章信息分析配置，分别作用在首页和文章页
     articleAnalyze: {
         showIcon: true, // 作者、日期、分类、标签、字数、阅读时长、浏览量等文章信息的图标是否显示
@@ -231,7 +237,17 @@ export default defineConfig({
         darkModeSwitchLabel: "主题",
         sidebarMenuLabel: "菜单",
         returnToTopLabel: "返回顶部",
-        lastUpdatedText: "上次更新时间",
+        lastUpdated:{
+            text: '最后更新于',
+            formatOptions: {
+                year: 'numeric',
+                month: 'long',
+                day:"numeric",
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone:'Asia/Shanghai',
+            }
+        },
         outline: {
             level: [2, 4],
             label: "本页导航",
@@ -266,5 +282,10 @@ export default defineConfig({
         build: {
             chunkSizeWarningLimit: 1500, // 限制警告的块大小
         },
+        resolve:{
+            alias:{
+                '@gold':path.resolve(__dirname,"./global")
+            }
+        }
     }
 })
