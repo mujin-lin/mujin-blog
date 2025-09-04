@@ -29,7 +29,7 @@ tk:
 
 hero:
   name: Mujin
-  text: Mujin 的个人博客
+#  text: Mujin 的个人博客
   tagline: ✨欢迎光临，Mujin 的个人博客站，大家互相学习，共同进步
   actions:
     - theme: brand

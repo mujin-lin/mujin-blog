@@ -9,6 +9,7 @@ import { useRuntime } from "../composables/useRuntime";
 import ConfigSwitch from "./ConfigSwitch.vue";
 import ContributeChart from "./ContributeChart.vue";
 import NotFound from "./404.vue";
+import DocFooterCopyright from "./DocFooterCopyright.vue";
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -82,6 +83,11 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
     <template #not-found>
       <NotFound />
     </template>
+    <!-- 文章末尾版权说明 -->
+    <template #doc-footer-before>
+      <DocFooterCopyright />
+    </template>
+
   </Teek.Layout>
 </template>
 

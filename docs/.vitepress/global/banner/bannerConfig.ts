@@ -8,7 +8,7 @@ const bannerDescription = [
     "不积跬步无以至千里,不积小流无以成江海。—《劝学》",
     "业精于勤荒于嬉,行成于思而毁于随。— 唐·韩愈",
 ]
-
+// 单位毫秒
 const imgIntervalMills = 50000;
 
 // 博客默认配置
