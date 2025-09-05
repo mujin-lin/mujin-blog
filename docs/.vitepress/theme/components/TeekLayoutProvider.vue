@@ -9,6 +9,7 @@ import { useRuntime } from "../composables/useRuntime";
 import ConfigSwitch from "./ConfigSwitch.vue";
 import ContributeChart from "./ContributeChart.vue";
 import NotFound from "./404.vue";
+//导入文档页脚版权组件
 import DocFooterCopyright from "./DocFooterCopyright.vue";
 
 const ns = "layout-provider";

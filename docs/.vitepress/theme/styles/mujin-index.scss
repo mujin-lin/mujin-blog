@@ -24,9 +24,24 @@
 @use "vitepress-theme-teek/theme-chalk/src/tk-plus/banner-desc-gradient.scss";
  //首页卡片悬停效果
 @use "vitepress-theme-teek/theme-chalk/src/tk-plus/home-card-hover.scss";
+// 主题增强样式
+@use "vitepress-theme-teek/theme-chalk/tk-nav-blur.css"; // 导航栏毛玻璃样式
 
 @use "./code-bg.scss";
 @use "./iframe.scss";
+
+// 导入包含混合器定义的文件
+@use "./var";
+// 菜单和侧边栏
+//@use "./menu/navigate.scss";
+@use "menu/mj-sidebar";
+//@use "menu/ScrollBar";
+//@use "./menu/sidebar-icon.scss";
+//@use "./menu/sidebarIcon.css";
+
+// 隐藏线条
+@use "doc/hidden";
+
 
 .tk-my__blogger{
   .slogan{
@@ -35,6 +50,7 @@
   }
 }
 
+// 修改 markdown 中绘制的思维导图的最大高度为 300
 .markmap-container{
   .markmap{
     min-height:300px !important;
@@ -48,10 +64,27 @@
 .color-red{
   color:red;
 }
+// 修改 markdown 中绘制的流程图的最大高度为 400
+.vp-doc{
+  .mermaid-container{
+    .mermaid{
+      .flowchart{
+        max-height: 370px !important;
+        //transform-origin: top left;
+      }
+    }
+  }
+}
 
-//.vp-doc{
-//  .h2{
-//    border-top: none !important;
-//    border-bottom: border-top: 1px solid var(--vp-c-divider);;
-//  }
-//}
+/* 页脚微章图片 */
+.tk-footer-info p img {
+  margin-left: 10px;
+}
+
+// ----
+/* 页脚微章居中 */
+.tk-footer-info p {
+  display: flex;
+  justify-content: center;
+}
+

@@ -26,6 +26,11 @@ const teekBlogCommonConfig: TeekConfig = {
             provider: "busuanzi",
         },
     },
+    codeBlock:{
+        enabled: true,
+        collapseHeight:1000,
+        overlay: true,
+    },
     friendLink: {
         // list: [
         //   {
@@ -150,18 +155,6 @@ export const teekBlogFullConfig: TeekConfig = {
     //     ],
     //     descStyle: "types",
     // },
-    comment: {
-        provider: "giscus",
-        options: {
-            repo: "Kele-Bingtang/vitepress-theme-teek",
-            repoId: "R_kgDONpVfBA",
-            category: "Announcements",
-            categoryId: "DIC_kwDONpVfBM4Cm3v9",
-        },
-    },
-    codeBlock: {
-        overlay: true,
-    },
     themeEnhance: {
         themeColor: {
             append: [

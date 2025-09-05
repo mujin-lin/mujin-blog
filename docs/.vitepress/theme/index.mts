@@ -5,20 +5,10 @@ import {useData} from "vitepress";
 import {defineComponent, h} from "vue";
 import { initComponent } from 'vitepress-plugin-legend/component'
 import 'vitepress-plugin-legend/dist/index.css'
-// Teek 本地主题包引用（与 Teek 在线主题包引用 二选一）
-// 当前引入文件为 scss，需要执行 pnpm add sass，如果不想安装额外依赖，可以直接引入 Teek 已经构建好的 css 文件，请看 https://vp.teek.top/styles-plus.html
-// import "@teek/theme-chalk/vp-plus/code-block-mobile.scss";
-// import "@teek/theme-chalk/vp-plus/sidebar.scss";
-// import "@teek/theme-chalk/vp-plus/nav.scss";
-// import "@teek/theme-chalk/vp-plus/aside.scss";
-// import "@teek/theme-chalk/vp-plus/doc-h1-gradient.scss";
-// import "@teek/theme-chalk/vp-plus/table.scss";
-// import "@teek/theme-chalk/vp-plus/mark.scss";
-// import "@teek/theme-chalk/vp-plus/blockquote.scss";
-// import "@teek/theme-chalk/vp-plus/index-rainbow.scss";
-// import "@teek/theme-chalk/vp-plus/doc-fade-in.scss";
-// import "@teek/theme-chalk/tk-plus/banner-desc-gradient.scss";
-// import "@teek/theme-chalk/tk-plus/home-card-hover.scss";
+
+//切换进度条
+// import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
+// import "nprogress-v2/dist/index.css"; // 进度条样式
 
 import "./styles/mujin-index.scss"
 

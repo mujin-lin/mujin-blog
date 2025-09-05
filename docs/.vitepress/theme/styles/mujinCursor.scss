@@ -1,0 +1,41 @@
+// 侧边栏鼠标 样式
+.VPSidebarItem{
+  .item{
+    //cursor: url("/mouse/ayuda.cur"),auto !important;
+    .VPLink{
+      p{
+        //cursor: url("/mouse/ayuda.cur"),auto !important;
+      }
+    }
+  }
+}
+
+// 一级文件夹hover渐变效果
+.VPSidebarItem.level-0 .item:hover .text {
+  cursor: pointer;
+}
+
+// 全局鼠标样式
+// /* 鼠标样式 */
+body {
+  cursor: url(/mouse/cat_default.cur), auto;
+  p,h1,h2,h3,h4,h5,h6,font,li{
+    cursor: url(/mouse1/texto.cur), auto;
+  }
+}
+
+a,
+button,
+img,
+svg,
+input,
+textarea,
+select,
+option,
+label,
+span {
+  cursor: url(/mouse/ayuda.cur), auto !important;
+}
+a:hover{
+  cursor: url(/mouse/ayuda.cur), auto !important;
+}

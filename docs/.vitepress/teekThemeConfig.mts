@@ -54,7 +54,19 @@ export const teekThemeConfig = defineTeekConfig({
         suffix: "Mujin",
     },
     codeBlock: {
+        enabled:true,
+        collapseHeight:1000,
+        overlay: true,
         copiedDone: TkMessage => TkMessage.success("复制成功！"),
+    },
+    comment: {
+        provider: "giscus",
+        options: {
+            repo: "mujin-lin/mujin-blog",
+            repoId: "R_kgDONpVfBA",
+            category: "Announcements",
+            categoryId: "DIC_kwDONpVfBM4Cm3v9",
+        },
     },
     post: {
         showCapture: true,
@@ -168,8 +180,10 @@ export const teekThemeConfig = defineTeekConfig({
     // },
     vitePlugins: {
         sidebarOption: {
-            initItems: false,
+            // initItems: false,
             ignoreIndexMd: true,
+            //打开侧边栏自动收缩功能
+            collapsed: true,
         },
 
         autoFrontmatter: true, // 自动生成 frontmatter
