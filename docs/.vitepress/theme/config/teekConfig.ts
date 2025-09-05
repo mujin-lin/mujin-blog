@@ -7,7 +7,7 @@ import {Banner} from "vitepress-theme-teek/es/config/interface";
 export const teekDocConfig: TeekConfig = {
     themeEnhance: {
         layoutSwitch: {
-            defaultMode: "bothWidthAdjustable",
+            defaultMode: "fullWidth",
         },
     },
     footerInfo:footerInfo,

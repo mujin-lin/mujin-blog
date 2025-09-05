@@ -63,9 +63,9 @@ export const teekThemeConfig = defineTeekConfig({
         provider: "giscus",
         options: {
             repo: "mujin-lin/mujin-blog",
-            repoId: "R_kgDONpVfBA",
+            repoId: "R_kgDOPj3S7Q",
             category: "Announcements",
-            categoryId: "DIC_kwDONpVfBM4Cm3v9",
+            categoryId: "DIC_kwDOPj3S7c4Cu_7Y",
         },
     },
     post: {
@@ -174,6 +174,10 @@ export const teekThemeConfig = defineTeekConfig({
         //   position: "after",
         //   className: "h1-bottom-info",
         // },
+    },
+    riskLink:{
+        enabled:true,
+        whitelist: ["https://blog.charily.top/", "https://mujin-blog.pages.dev/", "https://vp.teek.top/", /https:\/\/github.com/, /https:\/\/giee.com/], // 白名单，匹配到的链接不提示风险
     },
     // vite:{
     //     plugins:[legend()]
