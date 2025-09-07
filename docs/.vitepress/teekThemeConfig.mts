@@ -24,6 +24,8 @@ const coverImages = [
     "/img/bg/17.webp",
     "/img/bg/18.webp",
     "/img/bg/19.webp",
+    "/img/bg/20.webp",
+    "/img/bg/21.webp",
 ];
 
 
@@ -70,6 +72,8 @@ export const teekThemeConfig = defineTeekConfig({
     },
     post: {
         showCapture: true,
+        transition: true, // 是否开启过渡动画
+        defaultCoverImg:coverImages
     },
     siteAnalytics: [
         {
@@ -196,20 +200,20 @@ export const teekThemeConfig = defineTeekConfig({
         },
 
         // 自动格式formatter插件 添加文章封面图
-        autoFrontmatterOption: {
-            exclude: { title: true, date: true }, // 排除自动生成字段
-            transform: frontmatter => {
-                // 如果文件本身存在了 coverImg，则不生成
-                if (frontmatter.coverImg) return;
-
-                const list = coverImages;
-
-                const coverImg = list[Math.floor(Math.random() * list.length)];
-
-                const transformResult = { ...frontmatter, coverImg };
-
-                return Object.keys(transformResult).length ? transformResult : undefined;
-            },
-        },
+        // autoFrontmatterOption: {
+        //     exclude: { title: true, date: true }, // 排除自动生成字段
+        //     transform: frontmatter => {
+        //         // 如果文件本身存在了 coverImg，则不生成
+        //         if (frontmatter.coverImg) return;
+        //
+        //         const list = coverImages;
+        //
+        //         const coverImg = list[Math.floor(Math.random() * list.length)];
+        //
+        //         const transformResult = { ...frontmatter, coverImg };
+        //
+        //         return Object.keys(transformResult).length ? transformResult : undefined;
+        //     },
+        // },
     },
 });

@@ -12,22 +12,22 @@ export const friends = {
     // 友情链接数据列表
     list: [
         {
-            avatar: "https://vp.teek.top/teek-logo-large.png",
             name: "vitepress-theme-teek",
             desc: "Teek官网",
             link: "https://vp.teek.top/",
+            avatar: "/img/friends/teek-logo.webp",
         },
         {
             name: "Teeker",
             desc: "朝圣的使徒，正在走向编程的至高殿堂！",
             link: "http://notes.teek.top/",
-            avatar: "https://testingcf.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
+            avatar: "/img/friends/teeker.webp",
         },
         {
             name: "One",
-            desc: "朝圣的使徒，正在走向编程的至高殿堂！",
+            desc: "明心静性，爱自己",
             link: "https://onedayxyy.cn/",
-            avatar: "https://onedayxyy.cn/img/xyy-touxiang.png",
+            avatar: "/img/friends/one.webp",
         },
     ],
     // autoScroll: true,

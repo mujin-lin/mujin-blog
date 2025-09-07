@@ -1,7 +1,12 @@
 ---
+date: 2025-08-26 20:10:34
+title: aside
 layout: false
 permalink: /iframe/articlePage/aside
 article: false
+categories:
+  - examples
+  - articlePage
 ---
 
 <script setup lang="ts">

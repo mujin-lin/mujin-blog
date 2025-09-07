@@ -25,7 +25,7 @@ tk:
 #      description: 再见竟是，再也不见
 #      link: /
 #      # imgUrl: /img/other.png
-#      imgUrl: /img/xyy-3.webp     
+#      imgUrl: /img/one.webp     
 
 hero:
   name: Mujin
