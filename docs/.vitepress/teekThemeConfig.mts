@@ -30,6 +30,11 @@ const coverImages = [
 
 
 export const teekThemeConfig = defineTeekConfig({
+    themeEnhance:{
+        layoutSwitch: {
+            defaultMode: "fullWidth",
+        },
+    },
     blogger: {
         // 博主信息，显示在首页侧边栏
         avatar: "/img/logo.png",
