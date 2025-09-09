@@ -6,8 +6,8 @@ export const friends = {
     // scrollSpeed: 2500, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
 
     autoPage: true, // 是否自动翻页
-    pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
-    titleClick: (router) => router.go("/websites"), // 查看更多友链
+    pageSpeed: 30000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
+    titleClick: (router) => router.go("/about/navigation"), // 查看更多友链
 
     // 友情链接数据列表
     list: [
@@ -15,19 +15,19 @@ export const friends = {
             name: "vitepress-theme-teek",
             desc: "Teek官网",
             link: "https://vp.teek.top/",
-            avatar: "/img/friends/teek-logo.webp",
+            avatar: "https://vp.teek.top/teek-logo-large.png",
         },
         {
             name: "Teeker",
             desc: "朝圣的使徒，正在走向编程的至高殿堂！",
             link: "http://notes.teek.top/",
-            avatar: "/img/friends/teeker.webp",
+            avatar: "https://testingcf.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
         },
         {
             name: "One",
             desc: "明心静性，爱自己",
             link: "https://onedayxyy.cn/",
-            avatar: "/img/friends/one.webp",
+            avatar: "https://onedayxyy.cn/img/xyy.webp",
         },
     ],
     // autoScroll: true,
