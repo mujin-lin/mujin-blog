@@ -63,7 +63,7 @@ export const teekThemeConfig = defineTeekConfig({
     codeBlock: {
         enabled:true,
         collapseHeight:1000,
-        overlay: true,
+        overlay: false,
         copiedDone: TkMessage => TkMessage.success("复制成功！"),
     },
     comment: {
