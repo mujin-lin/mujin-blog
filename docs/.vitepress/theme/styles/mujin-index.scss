@@ -87,4 +87,8 @@
   display: flex;
   justify-content: center;
 }
-
+.vp-doc{
+  .MathJax{
+    overflow-y: hidden;
+  }
+}
