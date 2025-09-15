@@ -64,6 +64,7 @@ export const teekThemeConfig = defineTeekConfig({
         enabled:true,
         collapseHeight:1000,
         overlay: false,
+        overlayHeight: 0,
         copiedDone: TkMessage => TkMessage.success("复制成功！"),
     },
     comment: {

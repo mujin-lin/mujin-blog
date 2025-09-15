@@ -29,7 +29,8 @@ const teekBlogCommonConfig: TeekConfig = {
     codeBlock:{
         enabled: true,
         collapseHeight:1000,
-        overlay: true,
+        overlay: false,
+        overlayHeight: 0,
     },
     friendLink: {
         // list: [
