@@ -5,27 +5,27 @@ import {vitepressPluginLegend} from "vitepress-plugin-legend";
 
 
 const coverImages = [
-    "/img/bg/1.webp",
-    "/img/bg/2.webp",
-    "/img/bg/3.webp",
-    "/img/bg/4.webp",
-    "/img/bg/5.webp",
-    "/img/bg/6.webp",
-    "/img/bg/7.webp",
-    "/img/bg/8.webp",
-    "/img/bg/9.webp",
-    "/img/bg/10.webp",
-    "/img/bg/11.webp",
-    "/img/bg/12.webp",
-    "/img/bg/13.webp",
-    "/img/bg/14.webp",
-    "/img/bg/15.webp",
-    "/img/bg/16.webp",
-    "/img/bg/17.webp",
-    "/img/bg/18.webp",
-    "/img/bg/19.webp",
-    "/img/bg/20.webp",
-    "/img/bg/21.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/1.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/2.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/3.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/4.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/5.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/6.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/7.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/8.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/9.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/10.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/11.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/12.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/13.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/14.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/15.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/16.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/17.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/18.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/19.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/20.webp",
+    "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/bg/21.webp",
 ];
 
 
@@ -37,7 +37,7 @@ export const teekThemeConfig = defineTeekConfig({
     },
     blogger: {
         // 博主信息，显示在首页侧边栏
-        avatar: "/img/logo.png",
+        avatar: "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/logo.png",
         shape: "circle", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
         name: "Mujin",
         slogan: "只要一息尚存，就还有希望",

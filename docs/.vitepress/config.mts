@@ -42,7 +42,7 @@ export default defineConfig({
         },
     },
     themeConfig: {
-        logo: "/favicon.ico",
+        logo: "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/favicon.ico",
         darkModeSwitchLabel: "主题",
         sidebarMenuLabel: "菜单",
         returnToTopLabel: "返回顶部",

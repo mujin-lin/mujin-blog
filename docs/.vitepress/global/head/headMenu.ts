@@ -4,7 +4,7 @@ export const headMenu = [
     {text: "🏠首页", link: "/"},
     {
         text: `<div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/menu/runakao.png" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/menu/runakao.png" alt="" style="width: 16px; height: 16px;">
                   <span>软考</span>
                 </div>
                 `,
