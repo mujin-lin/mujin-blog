@@ -1,5 +1,5 @@
 import {defineTeekConfig} from "vitepress-theme-teek/config";
-import {friends, rewardConfig} from "./global";
+import {friendLinkItem, friends, rewardConfig} from "./global";
 import mathJax3 from "markdown-it-mathjax3";
 import {vitepressPluginLegend} from "vitepress-plugin-legend";
 
