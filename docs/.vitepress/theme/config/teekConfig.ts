@@ -1,7 +1,14 @@
 import type {TeekConfig} from "vitepress-theme-teek";
-import {blogAllPicture, blogSmallPicture, fullImgBanner, partImgBanner, imageLink, teekSocial} from "../../global";
-import {footerInfo} from "../../global";
-import {Banner} from "vitepress-theme-teek/es/config/interface";
+import {
+    blogAllPicture,
+    blogSmallPicture,
+    fullImgBanner,
+    partImgBanner,
+    imageLink,
+    teekSocial,
+    friends,
+    footerInfo
+} from "../../global";
 
 // 文档配置
 export const teekDocConfig: TeekConfig = {
@@ -32,59 +39,7 @@ const teekBlogCommonConfig: TeekConfig = {
         overlay: false,
         overlayHeight: 0,
     },
-    friendLink: {
-        // list: [
-        //   {
-        //     name: "Teeker",
-        //     desc: "朝圣的使徒，正在走向编程的至高殿堂！",
-        //     avatar: "https://testingcf.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
-        //     link: "http://notes.teek.top/",
-        //   },
-        //   {
-        //     name: "vuepress-theme-vdoing",
-        //     desc: "🚀一款简洁高效的VuePress 知识管理&博客 主题",
-        //     avatar: "https://doc.xugaoyi.com/img/logo.png",
-        //     link: "https://doc.xugaoyi.com/",
-        //   },
-        //   {
-        //     name: "One",
-        //     desc: "明心静性，爱自己",
-        //     avatar: "https://onedayxyy.cn/img/xyy-touxiang.png",
-        //     link: "https://onedayxyy.cn/",
-        //   },
-        //   {
-        //     name: "Hyde Blog",
-        //     desc: "人心中的成见是一座大山",
-        //     avatar: "https://teek.seasir.top/avatar/avatar.webp",
-        //     link: "https://teek.seasir.top/",
-        //   },
-        //   {
-        //     name: "二丫讲梵",
-        //     desc: "💻学习📝记录🔗分享",
-        //     avatar: "https://wiki.eryajf.net/img/logo.png",
-        //     link: " https://wiki.eryajf.net/",
-        //   },
-        //   {
-        //     name: "粥里有勺糖",
-        //     desc: "简约风的 VitePress 博客主题",
-        //     avatar: "https://theme.sugarat.top/logo.png",
-        //     link: "https://theme.sugarat.top/",
-        //   },
-        //   {
-        //     name: "VitePress 快速上手中文教程",
-        //     desc: "如果你也想搭建它，那跟我一起做吧",
-        //     avatar: "https://avatars.githubusercontent.com/u/90893790?v=4",
-        //     link: "https://vitepress.yiov.top/",
-        //   },
-        //   {
-        //     name: "友人A",
-        //     desc: "おとといは兎をみたの，昨日は鹿，今日はあなた",
-        //     avatar: "http://niubin.site/logo.jpg",
-        //     link: "http://niubin.site/",
-        //   },
-        // ],
-        autoScroll: true,
-    },
+    friendLink: friends,
     social: teekSocial,
     footerInfo:footerInfo
 };

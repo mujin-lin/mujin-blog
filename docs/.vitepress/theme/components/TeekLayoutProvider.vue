@@ -11,6 +11,7 @@ import ContributeChart from "./ContributeChart.vue";
 import NotFound from "./404.vue";
 //导入文档页脚版权组件
 import DocFooterCopyright from "./DocFooterCopyright.vue";
+import RouteSwitchingLoading from "./RouteSwitchingLoading.vue";
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -56,6 +57,10 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
 
 <template>
   <Teek.Layout>
+    <template #layout-top>
+      <!-- 路由切换遮罩动画组件 -->
+      <RouteSwitchingLoading />
+    </template>
     <template #teek-theme-enhance-bottom>
       <div :class="[ns, 'flx-align-center']">
         <ConfigSwitch v-model="currentStyle" @switch="handleConfigSwitch" />
