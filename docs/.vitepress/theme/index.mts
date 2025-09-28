@@ -7,8 +7,8 @@ import { initComponent } from 'vitepress-plugin-legend/component'
 import 'vitepress-plugin-legend/dist/index.css'
 
 //切换进度条
-// import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
-// import "nprogress-v2/dist/index.css"; // 进度条样式
+import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
+import "nprogress-v2/dist/index.css"; // 进度条样式
 
 import "./styles/mujin-index.scss"
 
@@ -33,5 +33,16 @@ export default {
         initComponent(app);
         // echarts 图表
         app.component('MyChart',MyChart)
+        // 非SSR环境下配置路由进度条
+        // @ts-expect-error
+        if (!import.meta.env.SSR) {
+            NProgress.configure({ showSpinner: false });
+            router.onBeforeRouteChange = () => NProgress.start();
+            router.onAfterRouteChange = () => {
+                setTimeout(() => {
+                    NProgress.done();
+                }, 100);
+            };
+        }
     }
 };
