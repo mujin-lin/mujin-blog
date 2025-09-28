@@ -3,10 +3,12 @@ import {version} from "vitepress-theme-teek/es/version";
 import {headMenu, vpSocial} from "./global";
 import path from 'path'
 import {teekThemeConfig} from "./teekThemeConfig.mjs";
+import {headScript} from "./global/head/webHeadConfig";
 
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    head:headScript,
     extends: teekThemeConfig,
     title: "Mujin Blog",
     description: "Mujin Blog",
