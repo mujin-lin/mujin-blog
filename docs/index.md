@@ -39,7 +39,7 @@ hero:
       text: 关于本站
       link: /about/web
   image:
-    src: /mujin-logo.png
+    src: /img/mujin-logo.svg
     alt: Mujin
 
 features:

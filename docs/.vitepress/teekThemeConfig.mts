@@ -1,5 +1,5 @@
 import {defineTeekConfig} from "vitepress-theme-teek/config";
-import {friendLinkItem, friends, rewardConfig} from "./global";
+import {friends, rewardConfig} from "./global";
 import mathJax3 from "markdown-it-mathjax3";
 import {vitepressPluginLegend} from "vitepress-plugin-legend";
 
@@ -37,7 +37,7 @@ export const teekThemeConfig = defineTeekConfig({
     },
     blogger: {
         // 博主信息，显示在首页侧边栏
-        avatar: "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/logo.png",
+        avatar: "https://testingcf.jsdelivr.net/gh/mujin-lin/mujin-blog-static/img/mujin-logo.svg",
         shape: "circle", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
         name: "Mujin",
         slogan: "只要一息尚存，就还有希望",
