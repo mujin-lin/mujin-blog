@@ -11,7 +11,7 @@ export const headMenu = [
         items: ruankaoItems
     },
     // {text: "✏️随记", items: notes},
-    {text: "关于", items: about},
+    {text: "🌏关于", items: about},
 ]
 // {
 //     text: "指南",
