@@ -6,7 +6,7 @@ tk:
     - icon: mdi:github
       name: GitHub
       link: https://github.com/mujin-lin
-    - icon: simple-icons:gitee
+    - icon: <svg t="1743875298298" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2388" width="200" height="200"><path d="M512 1024C229.2224 1024 0 794.7776 0 512S229.2224 0 512 0s512 229.2224 512 512-229.2224 512-512 512z m259.1488-568.8832H480.4096a25.2928 25.2928 0 0 0-25.2928 25.2928l-0.0256 63.2064c0 13.952 11.3152 25.2928 25.2672 25.2928h177.024c13.9776 0 25.2928 11.3152 25.2928 25.2672v12.6464a75.8528 75.8528 0 0 1-75.8528 75.8528H366.592a25.2928 25.2928 0 0 1-25.2672-25.2928v-240.1792a75.8528 75.8528 0 0 1 75.8272-75.8528h353.9456a25.2928 25.2928 0 0 0 25.2672-25.2928l0.0768-63.2064a25.2928 25.2928 0 0 0-25.2672-25.2928H417.152a189.6192 189.6192 0 0 0-189.6192 189.6448v353.9456c0 13.9776 11.3152 25.2928 25.2928 25.2928h372.9408a170.6496 170.6496 0 0 0 170.6496-170.6496v-145.408a25.2928 25.2928 0 0 0-25.2928-25.2672z" fill="#D81E06" p-id="2389"></path></svg>
       name: Gitee
       link: https://gitee.com/mujin-lin
   teekHome: false
@@ -29,8 +29,8 @@ tk:
 
 hero:
   name: Mujin
-#  text: Mujin 的个人博客
-  tagline: ✨欢迎光临，Mujin 的个人博客站，大家互相学习，共同进步
+  text: mujin个人博客网
+  tagline: ✨一个个人技术、知识分享分享，涵盖正在学习的，已经掌握的，踩过的坑，记录自己学习的步伐
   actions:
     - theme: brand
       text: 软考
@@ -56,16 +56,6 @@ features:
 #    title: 专注内容
 #    details: 只需 Markdown 即可轻松创建美观的文档站点，配合多维索引快速定位每个知识点。
 ---
-
-<!-- ## 💡 反馈交流
-
-在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/Kele-Bingtang/vitepress-theme-teek/issues)。 你也可以在 Issue 查看别人提的问题和解决方案。
-
-或者加入我们的交流群（添加我的微信并备注 <mark>进群</mark>）：
-
-<img src="https://gcore.jsdelivr.net/gh/Kele-Bingtang/static/index/20250412000919.png" alt="添加我微信备注「进群」" style="width: 180px;" />
-
-如果图片链接失效，可以在微信右上角 -> 添加朋友，然后搜索 `teekers` 来添加我的微信。 -->
 
 <style>
 
@@ -95,6 +85,15 @@ const { frontmatter } = useData();
 onMounted(() => {
   const heroTextDom = document.querySelector<HTMLElement>(".VPHero .text");
   const textDom = document.querySelector<HTMLElement>("#hero-text");
+
+  const allEls = document.querySelectorAll('[id=hero-text]');
+  if (allEls.length > 0) {
+        allEls.forEach((el,index) => {
+            if (index > 0) {
+                el.remove();
+            }
+        })
+  }
 
   if (!heroTextDom || !textDom) return;
 

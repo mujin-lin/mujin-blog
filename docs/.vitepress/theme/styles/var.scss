@@ -20,11 +20,17 @@
   @include text-clip-common;
 }
 
-//.VPHero.has-image .tagline {
-//  background: linear-gradient(to right, rgb(48, 153, 255) 0%, rgb(141, 133, 255) 63%, rgb(79, 76, 255) 100%) text;
-//  @include text-clip-common;
-//}
+.VPHero.has-image .tagline {
+  background: linear-gradient(to right, rgb(48, 153, 255) 0%, rgb(141, 133, 255) 63%, rgb(79, 76, 255) 100%) text;
+  @include text-clip-common;
+}
 
+@mixin text-clip-common {
+  background-clip: text; /* 标准语法，裁剪背景到文字 */
+  -webkit-background-clip: text; /* Safari/Chrome 前缀兼容 */
+  color: transparent; /* 让文字透明，露出背景渐变 */
+  display: inline-block; /* 让背景仅包裹文字，而非整行 */
+}
 
 
 /* 移动端页脚微章布局 */

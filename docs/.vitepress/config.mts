@@ -99,7 +99,8 @@ export default defineConfig({
         },
         resolve:{
             alias:{
-                '@gold':path.resolve(__dirname,"./global")
+                '@gold':path.resolve(__dirname,"./global"),
+                '@icon':path.resolve(__dirname,"./theme/icon/icon")
             }
         }
     }

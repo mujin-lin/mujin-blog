@@ -1,10 +1,10 @@
 export const ruankaoItems = [
     {
-        text: "软考简介",
+        text: "💯软考简介",
         link: '/ruankao/intro'
     },
     {
-        text: "软件设计师",
+        text: "🦁软件设计师",
         link: '/ruankao/softDesigner/info'
     }
 ];
