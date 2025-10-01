@@ -82,18 +82,28 @@ export const teekThemeConfig = defineTeekConfig({
         defaultCoverImg:coverImages
     },
     siteAnalytics: [
+        // blog.charily.top 地址的统计
+        {
+            provider: "umami",
+            options: {
+                id: "15bdbbad-a7cf-4e25-9806-45f7e7944a48",
+                src: "https://umami.charily.top/script.js",
+            },
+        },
+        // mujin-blog.pages.dev 地址的统计
+        {
+            provider: "umami",
+            options: {
+                id: "d4a31cb9-d187-4d5f-bb0a-5f9016d8db6c",
+                src: "https://umami.charily.top/script.js",
+            },
+        },
         {
             provider: "baidu",
             options: {
-                id: "d5ee872d9aa1ef8021f4a3921b2e9c2a",
+                id: "86e9cd1a12c618f367d6f48b957409cf",
             },
-        },
-        {
-            provider: "google",
-            options: {
-                id: "G-K5GNDW3L7K",
-            },
-        },
+        }
     ],
     articleShare: {
         enabled: true, // 是否开启文章链接分享功能
