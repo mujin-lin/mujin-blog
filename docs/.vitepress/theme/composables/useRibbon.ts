@@ -1,4 +1,5 @@
 import { isClient, useMounted, useScopeDispose } from "vitepress-theme-teek";
+import {emptyFn} from "../theme-extension";
 
 interface UseRibbonOptions {
   /**
@@ -41,12 +42,10 @@ interface UseRibbonOptions {
   ribbonDomBindClick?: boolean;
 }
 
-const fn = () => {};
-
 export const useRibbon = (options: UseRibbonOptions = {}) => {
   let canvas: HTMLCanvasElement | null = null;
   let ctx: CanvasRenderingContext2D | null = null;
-  let cleanupFn = fn;
+  let cleanupFn = emptyFn;
 
   const {
     alpha = 0.6,
@@ -58,8 +57,8 @@ export const useRibbon = (options: UseRibbonOptions = {}) => {
   } = options;
 
   const initRibbon = () => {
-    if (!isClient) return fn;
-    if (document.getElementById("ribbon")) return fn;
+    if (!isClient) return emptyFn;
+    if (document.getElementById("ribbon")) return emptyFn;
 
     // 创建 canvas
     canvas = document.createElement("canvas");
@@ -81,7 +80,7 @@ export const useRibbon = (options: UseRibbonOptions = {}) => {
     canvas.height = height * dpr;
     ctx = canvas.getContext("2d");
 
-    if (!ctx) return fn;
+    if (!ctx) return emptyFn;
 
     ctx.scale(dpr, dpr);
     ctx.globalAlpha = alpha;
@@ -89,7 +88,7 @@ export const useRibbon = (options: UseRibbonOptions = {}) => {
     let path: { x: number; y: number }[] = [];
 
     function init() {
-      if (!ctx) return fn;
+      if (!ctx) return emptyFn;
       ctx.clearRect(0, 0, width, height);
       path = [
         { x: 0, y: height * 0.7 + size },
@@ -101,7 +100,7 @@ export const useRibbon = (options: UseRibbonOptions = {}) => {
     }
 
     function draw(start: { x: number; y: number }, end: { x: number; y: number }) {
-      if (!ctx) return fn;
+      if (!ctx) return emptyFn;
       ctx.beginPath();
       ctx.moveTo(start.x, start.y);
       ctx.lineTo(end.x, end.y);

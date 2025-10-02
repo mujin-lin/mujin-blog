@@ -13,6 +13,8 @@ import NotFound from "./404.vue";
 import DocFooterCopyright from "./DocFooterCopyright.vue";
 import RouteSwitchingLoading from "./RouteSwitchingLoading.vue";
 import Clock from "./Clock.vue";
+import BackTop from "./BackTop.vue";
+import ScrollProgressBar from "./ScrollProgressBar.vue";
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -59,6 +61,8 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
 <template>
   <Teek.Layout>
     <template #layout-top>
+      <!-- 顶部滚动条组件 -->
+      <ScrollProgressBar />
       <!-- 路由切换遮罩动画组件 -->
       <RouteSwitchingLoading />
     </template>
@@ -90,7 +94,10 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
     <template #not-found>
       <NotFound />
     </template>
-
+    <!-- 回到顶部组件插槽 -->
+    <template #teek-back-top>
+      <BackTop />
+    </template>
     <!-- 右上角时钟组件 -->
     <template #nav-bar-content-after>
       <Clock/>

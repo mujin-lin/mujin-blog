@@ -4,6 +4,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
+import {isClient} from "vitepress-theme-teek";
 
 // 定义组件 Props
 const props = defineProps({
@@ -33,12 +34,14 @@ watch(() => props.option, (newOption) => {
 })
 
 onMounted(() => {
+  if (!isClient) return;
   initChart()
   // 可选：响应窗口 resize 事件
   window.addEventListener('resize', handleResize)
 })
 
 onUnmounted(() => {
+  if (!isClient) return;
   if (chartInstance) {
     chartInstance.dispose() // 清理实例
   }

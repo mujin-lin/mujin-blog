@@ -14,6 +14,8 @@ export const twikooComment = {
         // envId: "https://twikoo.charily.top/",
         // version: "1.6.44"
         envId: "https://twikoo.charily.top/",
-        version: "1.6.44"
+        version: "1.6.44",
+        jsLink: "https://s4.zstatic.net/npm/twikoo@1.6.44/dist/twikoo.min.js",
+        cssLink: "https://s4.zstatic.net/npm/twikoo@1.6.44/dist/twikoo.css"
     }
 }

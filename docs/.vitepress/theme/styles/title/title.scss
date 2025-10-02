@@ -1,0 +1,33 @@
+
+@mixin text-clip-common-without-display {
+  background-clip: text; /* 标准语法，裁剪背景到文字 */
+  -webkit-background-clip: text; /* Safari/Chrome 前缀兼容 */
+  color: transparent; /* 让文字透明，露出背景渐变 */
+}
+
+
+
+.VPDoc h2 {
+  background: -webkit-linear-gradient(
+                    135deg,
+                    rgb(255, 182, 133),
+                    rgb(255, 111, 29) ,
+                    rgb(252, 181, 232) ,
+                    rgb(133, 157, 225),
+                    rgb(251, 62, 230)
+    );
+  @include text-clip-common-without-display;
+}
+
+.VPDoc h3 {
+  background: -webkit-linear-gradient(
+                  135deg,
+                  rgb(255, 182, 133),
+                  rgb(255, 111, 29) ,
+                  rgb(252, 181, 232),
+                  rgb(135, 148, 255),
+                  rgb(133, 157, 225),
+                  rgb(255, 84, 189)
+  );
+  @include text-clip-common-without-display;
+}

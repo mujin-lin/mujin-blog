@@ -1,0 +1,20 @@
+/* 定义自定义中文字体 */
+@font-face {
+  font-family: "江城圆体";
+  //src: url("https://img.seasir.top/TsukuARdGothicStd-Bold.woff2") format("woff2");
+  src: url("/font/RiverCityCricle.woff2") format("woff2");
+  font-weight: 400; /* 与实际字体匹配 */
+  font-display: swap;
+}
+
+/* 应用字体 */
+:root {
+  --vp-font-family-base: "江城圆体", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+
+  --vp-font-family-mono: "JetBrains Mono", "Cascadia Mono", "Not Sans SC", monospace; /* mono：影响代码块的等宽字体。 */
+}
+
+body{
+  // 防止被扣子等覆盖字体设置
+  font-family: var(--vp-font-family-base)!important;
+}

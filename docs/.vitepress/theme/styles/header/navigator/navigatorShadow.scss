@@ -1,85 +1,82 @@
-
-@mixin navigator-text-shadow {
-  /* 控制文字的阴影颜色 */
-  .VPNavBarTitle .title,
-  .VPNavBarMenuLink,
-  .VPNavBarMenuGroup .text,
-  .VPSocialLink {
-    color: var(--vp-c-white) !important;
-    text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            -2px 2px 4px rgba(0, 0, 0, 0.5),
-            2px -2px 4px rgba(0, 0, 0, 0.5),
-            -2px -2px 4px rgba(0, 0, 0, 0.5);
-
-    /* 添加平滑过渡动画 */
-    transition:
-            color 0.3s ease,
-            text-shadow 0.3s ease;
-
-    /* 控制鼠标悬停文字后的文字颜色 */
-    &.active,
-    &:hover {
-      color: rgba(0, 110, 255, 1) !important; // 修改文字颜色
-      text-shadow: none !important;
+.tk-layout .VPNavBar.home.full-img-nav-bar:not(.screen-open) {
+  /* -------   导航文字呼吸灯  ------- */
+  // 修改颜色，请注意同步一样的颜色，避免晃眼
+  @keyframes text-shadow-breath {
+    // 修改颜色，请注意同步一样的颜色，避免晃眼
+    0%,
+    100% {
+      text-shadow:
+              2px 2px 4px rgba(0, 0, 0, 0.5),
+              -2px 2px 4px rgba(0, 0, 0, 0.5),
+              2px -2px 4px rgba(0, 0, 0, 0.5),
+              -2px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+    25%,
+    75% {
+      text-shadow:
+              2px 2px 4px rgba(0, 0, 0, 0.375),
+              -2px 2px 4px rgba(0, 0, 0, 0.375),
+              2px -2px 4px rgba(0, 0, 0, 0.375),
+              -2px -2px 4px rgba(0, 0, 0, 0.375);
+    }
+    50% {
+      text-shadow: none;
     }
   }
 
-  /* 控制搜索栏的阴影颜色 */
+  .VPNavBarTitle .title,
+  .VPNavBarMenuLink,
+  .VPNavBarMenuGroup .text,
+  .VPSocialLink,
   .DocSearch-Button,
-  .DocSearch-Input {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    color: var(--vp-c-white);
-    text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            -2px 2px 4px rgba(0, 0, 0, 0.5),
-            2px -2px 4px rgba(0, 0, 0, 0.5),
-            -2px -2px 4px rgba(0, 0, 0, 0.5);
-  }
-
+  .DocSearch-Input,
   .DocSearch-Button-Placeholder {
-    text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            -2px 2px 4px rgba(0, 0, 0, 0.5),
-            2px -2px 4px rgba(0, 0, 0, 0.5),
-            -2px -2px 4px rgba(0, 0, 0, 0.5);
+    animation: text-shadow-breath 5s ease-in-out infinite alternate;
   }
 
-  /* 控制配置切换图标的描边颜色 */
+  /* -------   图标描边呼吸灯  ------- */
+  // 修改颜色，请注意同步一样的颜色，避免晃眼
+  @keyframes icon-shadow-breath {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 1px rgba(255, 0, 212, 0.5)) drop-shadow(0 0 0.5px rgba(255, 0, 212, 0.5));
+    }
+    25%,
+    75% {
+      filter: drop-shadow(0 0 1px rgba(255, 0, 212, 0.375)) drop-shadow(0 0 0.5px rgba(255, 0, 212, 0.375));
+    }
+    50% {
+      filter: drop-shadow(0 0 1px rgba(255, 0, 212, 0)) drop-shadow(0 0 0.5px rgba(255, 0, 212, 0));
+    }
+  }
+
   .tk-icon {
-    cursor: pointer;
-    filter: drop-shadow(0 0 1px rgba(255, 0, 212, 0.5)) // 可修改描边颜色🔽颜色要与下面保持一致
-    drop-shadow(0 0 0.5px rgba(255, 0, 212, 0.5)); // 可修改描边颜色🔼颜色要与上面保持一致
+    animation: icon-shadow-breath 5s ease-in-out infinite alternate;
   }
 
-  /* 控制时钟容器背景色 */
+  /* -------   时钟背景呼吸灯  ------- */
+  @keyframes clock-bg-breath {
+    // 修改颜色，请注意同步一样的颜色，避免晃眼
+    0%,
+    100% {
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
   #clock {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.2rem;
-    position: relative;
-    border-radius: 0.5rem;
-    padding: 0.2rem 0.5rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    animation: clock-bg-breath 5s ease-in-out infinite alternate;
   }
 
-  /* 控制时钟文字颜色 */
+  /* 时钟文字颜色保持不变 */
   #clock .hour,
   #clock .minute,
   #clock .second,
   #clock .separator {
-    color: rgba(255, 255, 255, 1); // 可修改文字颜色
+    color: rgba(255, 255, 255, 1); // 可修改文本颜色
   }
 }
-
-
-/* 仅首页全屏 Banner 时的导航栏样式美化 */
-.tk-layout .VPNavBar.home.full-img-nav-bar:not(.screen-open) {
-  @include navigator-text-shadow;
-}
-///* 仅首页全屏 Banner 时的导航栏样式美化 */
-//.tk-layout .VPNavBar.top.home.full-img-nav-bar:not(.screen-open) {
-//  @include navigator-text-shadow;
-//}

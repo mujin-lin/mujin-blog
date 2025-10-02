@@ -58,9 +58,17 @@
 
 //region 导航栏字体阴影样式
 
-//@use "./header/navigator/navigatorShadow";
+@use "./header/navigator/navigatorShadow";
 
 //endregion
+
+// region 字体
+//@use "./font/font.scss" as *;
+// endregion
+
+// region 字体
+@use "./title/title" as *;
+// endregion
 
 //region 进度条
 // 切换路由进度条颜色样式
@@ -112,7 +120,7 @@
 
 //endregion
 
-// region
+// region twikoo 评论
 #twikoo > .tk-comments > .tk-submit > .tk-row > .tk-col > .tk-input > textarea::placeholder{
  color: rgba(255, 0, 0, 0.5) !important;
 }
@@ -149,3 +157,15 @@
 .tk-my__avatar {
   margin-top: 7rem;
 }
+
+
+// copy banner
+
+.tk-copy-banner{
+  background-color: rgb(from var(--vp-c-brand-1) r g b / 0.8);
+}
+
+.tk-copy-banner__slide{
+  background-color: rgb(from var(--vp-c-brand-2) r g b / 0.8) !important;
+}
+

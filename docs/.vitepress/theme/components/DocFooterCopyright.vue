@@ -34,7 +34,9 @@
             <span class="meta-text">版权</span>:
           </span>
           <span class="copyright-info">
-            本站文章<a  v-if="!config.licenseUrl" :href="config.licenseUrl" target="_blank" rel="noopener">除特别声明外，均采用{{ config.licenseName }}协议,</a>转载请注明来自<a :href="config.siteUrl" target="_blank" rel="noopener">{{ config.siteName }}</a>！
+            本站文章<a v-if="!config.licenseUrl" :href="config.licenseUrl" target="_blank"
+                       rel="noopener">除特别声明外，均采用{{ config.licenseName }}协议,</a>转载请注明来自<a
+              :href="config.siteUrl" target="_blank" rel="noopener">{{ config.siteName }}</a>！
           </span>
         </div>
       </div>
@@ -43,29 +45,31 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useData, useRoute } from 'vitepress'
+import {computed} from 'vue'
+import {useData, useRoute} from 'vitepress'
+import {isClient} from "vitepress-theme-teek";
 
 // 统一配置区
 const config = {
   authorName: 'Mujin',
-  authorUrl: window.location.origin,
+  authorUrl: !isClient ? "" : window.location.origin,
   siteName: 'Mujin Blog',
-  siteUrl: window.location.origin,
+  siteUrl: !isClient ? "" : window.location.origin,
   licenseName: '',
   licenseUrl: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'
 }
 
 // 获取 frontmatter 和路由
-const { frontmatter } = useData()
+const {frontmatter} = useData()
 const route = useRoute()
 
 // 是否显示版权组件
 const shouldShow = computed(() => frontmatter.value.copyright !== false)
 
 // 当前页面完整 URL
-const currentUrl =  computed(() => {
-  const url = window.location.origin+frontmatter.value.permalink;
+const currentUrl = computed(() => {
+  if (!isClient) return ''
+  const url = window.location.origin + frontmatter.value.permalink;
   return decodeURIComponent(url)
 })
 
@@ -93,9 +97,8 @@ const currentUrl =  computed(() => {
 .copyright-card:hover {
   border-color: var(--vp-c-brand);
   transform: translateY(-2px);
-  box-shadow: 
-    0 4px 12px rgba(33, 122, 244, 0.12),
-    0 0 0 1px var(--vp-c-brand);
+  box-shadow: 0 4px 12px rgba(33, 122, 244, 0.12),
+  0 0 0 1px var(--vp-c-brand);
 }
 
 /* 公共信号图标装饰 */
@@ -170,10 +173,21 @@ const currentUrl =  computed(() => {
   display: inline-block;
 }
 
-.shiguang-icon-user::before { content: '👤'; }
-.shiguang-icon-link::before  { content: '🔗'; }
-.shiguang-icon-cc::before    { content: '🌐'; }
-.shiguang-icon-public::before { content: '📡'; }
+.shiguang-icon-user::before {
+  content: '👤';
+}
+
+.shiguang-icon-link::before {
+  content: '🔗';
+}
+
+.shiguang-icon-cc::before {
+  content: '🌐';
+}
+
+.shiguang-icon-public::before {
+  content: '📡';
+}
 
 /* 移动端适配 */
 @media (max-width: 768px) {
