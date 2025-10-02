@@ -6,7 +6,6 @@ import {
     partImgBanner,
     imageLink,
     teekSocial,
-    friends,
     footerInfo
 } from "../../global";
 
@@ -39,7 +38,7 @@ const teekBlogCommonConfig: TeekConfig = {
         overlay: false,
         overlayHeight: 0,
     },
-    friendLink: friends,
+    // friendLink: friends,
     social: teekSocial,
     footerInfo:footerInfo
 };

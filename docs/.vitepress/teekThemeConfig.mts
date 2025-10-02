@@ -1,5 +1,5 @@
 import {defineTeekConfig} from "vitepress-theme-teek/config";
-import {friends, rewardConfig} from "./global";
+import {friends, rewardConfig, twikooComment} from "./global";
 import mathJax3 from "markdown-it-mathjax3";
 import {vitepressPluginLegend} from "vitepress-plugin-legend";
 
@@ -67,15 +67,7 @@ export const teekThemeConfig = defineTeekConfig({
         overlayHeight: 0,
         copiedDone: TkMessage => TkMessage.success("复制成功！"),
     },
-    comment: {
-        provider: "giscus",
-        options: {
-            repo: "mujin-lin/mujin-blog",
-            repoId: "R_kgDOPj3S7Q",
-            category: "Announcements",
-            categoryId: "DIC_kwDOPj3S7c4Cu_7Y",
-        },
-    },
+    comment:twikooComment,
     post: {
         showCapture: true,
         transition: true, // 是否开启过渡动画

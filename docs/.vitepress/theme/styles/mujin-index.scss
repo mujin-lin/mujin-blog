@@ -1,3 +1,5 @@
+// region Teek 主题样式
+
 // Teek 在线主题包引用（需安装 Teek 在线版本）
 @use "vitepress-theme-teek/index.css";
 // 移动端代码块样式优化
@@ -22,16 +24,23 @@
 @use "vitepress-theme-teek/theme-chalk/src/vp-plus/doc-fade-in.scss";
 // 博客风格 Banner 描述渐变样式
 @use "vitepress-theme-teek/theme-chalk/src/tk-plus/banner-desc-gradient.scss";
- //首页卡片悬停效果
+//首页卡片悬停效果
 @use "vitepress-theme-teek/theme-chalk/src/tk-plus/home-card-hover.scss";
 // 主题增强样式
-@use "vitepress-theme-teek/theme-chalk/tk-nav-blur.css"; // 导航栏毛玻璃样式
+
 
 @use "./code-bg.scss";
 @use "./iframe.scss";
 
+// endregion
+
+// region 定义的参数
 // 导入包含混合器定义的文件
 @use "./var";
+// endregion
+
+// region 文章打开时的当前页菜单
+
 // 菜单和侧边栏
 //@use "./menu/navigate.scss";
 @use "menu/mj-sidebar";
@@ -39,10 +48,21 @@
 //@use "./menu/sidebar-icon.scss";
 //@use "./menu/sidebarIcon.css";
 
-// 隐藏线条
+// endregion
+
+// region 线条隐藏
+
 @use "doc/hidden";
 
-// 进度条
+// endregion
+
+//region 导航栏字体阴影样式
+
+//@use "./header/navigator/navigatorShadow";
+
+//endregion
+
+//region 进度条
 // 切换路由进度条颜色样式
 .nprogress .bar {
   background: linear-gradient(
@@ -56,40 +76,61 @@
   ) !important;
 }
 
+//endregion
 
-.tk-my__blogger{
-  .slogan{
-    text-align: center;
-    align-content: center;
-  }
-}
+//region 思维导图和流程图的最大高度控制
 
 // 修改 markdown 中绘制的思维导图的最大高度为 300
-.markmap-container{
-  .markmap{
-    min-height:300px !important;
+.markmap-container {
+  .markmap {
+    min-height: 300px !important;
   }
 }
 
-.blob-600{
-  font-weight: 600;
-}
-
-.color-red{
-  color:red;
-}
 // 修改 markdown 中绘制的流程图的最大高度为 400
-.vp-doc{
-  .mermaid-container{
-    .mermaid{
-      .flowchart{
+.vp-doc {
+  .mermaid-container {
+    .mermaid {
+      .flowchart {
         max-height: 370px !important;
         //transform-origin: top left;
       }
-      .classDiagram{
+
+      .classDiagram {
         max-height: 370px !important;
       }
     }
+  }
+}
+
+// 数学公式
+.vp-doc {
+  .MathJax {
+    overflow-y: hidden;
+  }
+}
+
+//endregion
+
+// region
+#twikoo > .tk-comments > .tk-submit > .tk-row > .tk-col > .tk-input > textarea::placeholder{
+ color: rgba(255, 0, 0, 0.5) !important;
+}
+
+// endregion
+
+.blob-600 {
+  font-weight: 600;
+}
+
+.color-red {
+  color: red;
+}
+
+.tk-my__blogger {
+  .slogan {
+    text-align: center;
+    align-content: center;
   }
 }
 
@@ -104,12 +145,7 @@
   display: flex;
   justify-content: center;
 }
-.vp-doc{
-  .MathJax{
-    overflow-y: hidden;
-  }
-}
 
-.tk-my__avatar{
+.tk-my__avatar {
   margin-top: 7rem;
 }

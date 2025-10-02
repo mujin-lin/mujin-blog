@@ -12,6 +12,7 @@ import NotFound from "./404.vue";
 //导入文档页脚版权组件
 import DocFooterCopyright from "./DocFooterCopyright.vue";
 import RouteSwitchingLoading from "./RouteSwitchingLoading.vue";
+import Clock from "./Clock.vue";
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -88,6 +89,11 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
 
     <template #not-found>
       <NotFound />
+    </template>
+
+    <!-- 右上角时钟组件 -->
+    <template #nav-bar-content-after>
+      <Clock/>
     </template>
     <!-- 文章末尾版权说明 -->
     <template #doc-footer-before>

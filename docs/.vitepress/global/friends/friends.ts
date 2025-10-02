@@ -5,8 +5,8 @@ import {FriendLink} from "vitepress-theme-teek/es/config/interface";
 export const friends: FriendLink = {
     enabled: true, // 是否启用友情链接卡片
     limit: 4, // 一页显示的数量
-    autoScroll: false, // 是否自动滚动
-    scrollSpeed: 2500, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
+    // autoScroll: true, // 是否自动滚动
+    // scrollSpeed: 100000, // 滚动间隔时间，单位：毫秒。autoScroll 为 true 时生效
 
     autoPage: true, // 是否自动翻页
     pageSpeed: 30000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效

@@ -10,6 +10,9 @@ import 'vitepress-plugin-legend/dist/index.css'
 import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
 import "nprogress-v2/dist/index.css"; // 进度条样式
 
+
+import "vitepress-theme-teek/tk-plus/banner-full-img-scale.scss";
+
 import "./styles/mujin-index.scss"
 
 export default {
