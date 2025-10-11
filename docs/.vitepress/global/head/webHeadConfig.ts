@@ -16,6 +16,13 @@ export const headScript: HeadConfig[] = [
             content: "C32F955946B10A7D9FC03D9F850B6532"
         }
     ],
+    // 百度收录
+    ["meta",
+        {
+            name: "baidu-site-verification",
+            content: "codeva-pEkztjHybU"
+        }
+    ],
     // mujin-blog.pages.dev 地址的统计
     // [ "script",
     //     {
