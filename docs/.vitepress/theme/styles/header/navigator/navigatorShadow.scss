@@ -80,3 +80,17 @@
     color: rgba(255, 255, 255, 1); // 可修改文本颜色
   }
 }
+
+.VPNavBarMenu{
+  .VPNavBarMenuGroup{
+    .menu{
+      .VPMenu{
+        .VPMenuLink{
+          .VPLink{
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

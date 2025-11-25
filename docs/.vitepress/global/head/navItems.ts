@@ -20,6 +20,21 @@ export const about = [
     }
 ];
 
+export const program = [
+    // {
+    //     text: "🍵Java",
+    //     link: '/programming/java'
+    // },
+    {
+        text: `<div style="display: flex; align-items: center; gap: 4px;">
+                  <img src="https://spring.io/img/projects/spring-boot.svg" alt="" style="width: 16px; height: 16px;">
+                  <span>Spring Boot</span>
+                </div>
+                `,
+        link: '/programming/SpringBoot'
+    }
+]
+
 export const notes = [
     {
         text: "💰金价",

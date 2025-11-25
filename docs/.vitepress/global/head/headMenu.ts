@@ -1,4 +1,4 @@
-import {about, notes, ruankaoItems} from "./navItems";
+import {about, program, ruankaoItems} from "./navItems";
 
 export const headMenu = [
     {text: "🏠首页", link: "/"},
@@ -11,6 +11,7 @@ export const headMenu = [
         items: ruankaoItems
     },
     // {text: "✏️随记", items: notes},
+    {text: "🧑🏻‍💻编程技术", items: program},
     {text: "🥂关于", items: about},
 ]
 // {
