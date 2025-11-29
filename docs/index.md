@@ -35,6 +35,9 @@ hero:
     - theme: brand
       text: 软考
       link: /ruankao/intro
+    - theme: brand
+      text: Spring Boot
+      link: /ruankao/intro
     - theme: alt
       text: 关于本站
       link: /about/web
