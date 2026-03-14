@@ -1,6 +1,7 @@
 import {defineConfig} from "vitepress";
 import {version} from "vitepress-theme-teek/es/version";
 import {headMenu, vpSocial} from "./global";
+// @ts-ignore
 import path from 'path'
 import {teekThemeConfig} from "./teekThemeConfig.mjs";
 import {headScript} from "./global/head/webHeadConfig";
@@ -8,7 +9,7 @@ import {headScript} from "./global/head/webHeadConfig";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    head:headScript,
+    head: headScript,
     extends: teekThemeConfig,
     title: "Mujin Blog",
     description: "Mujin Blog",
@@ -38,7 +39,7 @@ export default defineConfig({
             const permalinks = (globalThis as any).VITEPRESS_CONFIG.site.themeConfig.permalinks;
             items.forEach(item => {
                 const permalink = permalinks?.map[item.url];
-                if (permalink) permalinkItemBak.push({ url: permalink, lastmod: item.lastmod });
+                if (permalink) permalinkItemBak.push({url: permalink, lastmod: item.lastmod});
             });
             return [...items, ...permalinkItemBak];
         },
@@ -48,15 +49,15 @@ export default defineConfig({
         darkModeSwitchLabel: "主题",
         sidebarMenuLabel: "菜单",
         returnToTopLabel: "返回顶部",
-        lastUpdated:{
+        lastUpdated: {
             text: '最后更新于',
             formatOptions: {
                 year: 'numeric',
                 month: 'long',
-                day:"numeric",
+                day: "numeric",
                 hour: '2-digit',
                 minute: '2-digit',
-                timeZone:'Asia/Shanghai',
+                timeZone: 'Asia/Shanghai',
             }
         },
         outline: {
@@ -68,6 +69,7 @@ export default defineConfig({
             next: "下一页",
         },
         // https://vitepress.dev/reference/default-theme-config
+        // @ts-ignore
         nav: headMenu,
 
         // sidebar: [
@@ -80,27 +82,29 @@ export default defineConfig({
         //     }
         // ],
 
-        socialLinks:vpSocial,
+        socialLinks: vpSocial,
         search: {
             provider: "local",
         },
-        editLink:{
-            text:"编辑",
-            pattern:"#"
+        editLink: {
+            text: "编辑",
+            pattern: "#"
         }
     },
     vite: {
         server: {
-            port: 83,
+            port: 9993,
         },
         // 构建
         build: {
             chunkSizeWarningLimit: 1500, // 限制警告的块大小
         },
-        resolve:{
-            alias:{
-                '@gold':path.resolve(__dirname,"./global"),
-                '@icon':path.resolve(__dirname,"./theme/icon/icon")
+        resolve: {
+            alias: {
+                // @ts-ignore
+                '@gold': path.resolve(__dirname, "./global"),
+                // @ts-ignore
+                '@icon': path.resolve(__dirname, "./theme/icon/icon")
             }
         }
     }

@@ -3,6 +3,7 @@ import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
 import MyChart from './components/MyChart.vue'
 import {useData} from "vitepress";
 import {defineComponent, h} from "vue";
+// @ts-ignore
 import {initComponent} from 'vitepress-plugin-legend/component'
 import 'vitepress-plugin-legend/dist/index.css'
 
