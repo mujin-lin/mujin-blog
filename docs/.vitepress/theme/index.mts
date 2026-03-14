@@ -3,9 +3,8 @@ import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
 import MyChart from './components/MyChart.vue'
 import {useData} from "vitepress";
 import {defineComponent, h} from "vue";
-// @ts-ignore
 import {initComponent} from 'vitepress-plugin-legend/component'
-import 'vitepress-plugin-legend/dist/index.css'
+// import 'vitepress-plugin-legend/dist/index.css'
 
 //切换进度条
 import {NProgress} from "nprogress-v2/dist/index.js"; // 进度条组件
